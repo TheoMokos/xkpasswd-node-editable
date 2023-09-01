@@ -50,7 +50,7 @@ var h = {
 
     rtn.pattern = opts.pattern || predefined.pattern;
     rtn.separator = separators.split('')[h.random(0, separators.length - 1)];
-    rtn.transform = opts.transform || predefined.transform || 'lowercase';
+    rtn.transform = opts.transform || predefined.transform || '';
     rtn.wordList = opts.wordList;
 
     return rtn;
@@ -134,7 +134,7 @@ module.exports = function main(opts) {
       if (uppercase || type === 'W') {
         value = value.toUpperCase();
       } else {
-        value = value.toLowerCase();
+        value = value;
       }
     }
 
